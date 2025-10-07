@@ -34,9 +34,8 @@ targets = [
     ("OpenMP", 64,  "omp-64"),
 ]
 
-# 组织： per N -> {col_name: util%}
 by_n = defaultdict(dict)
-def bytes_moved(N):   # 近似主导项
+def bytes_moved(N):  
     return 8.0 * N * N  # bytes
 
 def find_row(prefix, threads, N):
