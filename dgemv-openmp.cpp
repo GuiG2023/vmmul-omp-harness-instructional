@@ -26,6 +26,7 @@ void my_dgemv(int n, double *A, double *x, double *y)
 // insert your dgemv code here. you may need to create additional parallel regions,
 // and you will want to comment out the above parallel code block that prints out
 // nthreads and thread_id so as to not taint your timings
+// OpenMP parallel implementation of y :=y + A*x
 #pragma omp parallel for schedule(static)
 
    for (int i = 0; i < n; i++)
